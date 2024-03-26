@@ -44,8 +44,8 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Pom
-        uses: jactions/maven-version@v1
+      - id: get-version
+        uses: JActions/maven-version@v1.2.0
         with:
           pom: StarWars
       - run: mvn clean test -Dcucumber.filter.tags="@ui or @api"
