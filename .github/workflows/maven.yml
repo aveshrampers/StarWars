@@ -26,7 +26,6 @@ jobs:
           cache: npm
           cache-dependency-path: star-wars
       - run: yarn install
-      - run: yarn build
       - run: yarn start &
 
   Tests:
@@ -44,6 +43,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
+          cache-dependency-path: StarWars
       - run: mvn clean test -Dcucumber.filter.tags="@ui or @api"
 
       - name: Build test report
