@@ -24,9 +24,7 @@ jobs:
         with:
           node-version: '20.x'
           cache: npm
-      - run: |
-          cd..
-          cd .\star-wars\
+          cache-dependency-path: star-wars/yarn.lock
       - run: yarn install
       - run: yarn build
       - run: yarn start &
