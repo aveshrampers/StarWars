@@ -43,7 +43,11 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
-          cache-dependency-path: StarWars
+
+      - name: Pom
+        uses: jactions/maven-version@v1
+        with:
+          pom: StarWars
       - run: mvn clean test -Dcucumber.filter.tags="@ui or @api"
 
       - name: Build test report
