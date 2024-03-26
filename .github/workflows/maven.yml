@@ -29,32 +29,34 @@ jobs:
       - run: yarn start &
 
   Tests:
+    if: always()
+    needs: Setup
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-      with:
-        repository: aveshrampers/StarWars
-        path: StarWarsUI
-    - name: Set up JDK 21
-      uses: actions/setup-java@v3
-      with:
-        java-version: '21'
-        distribution: 'temurin'
-        cache: maven
-    - run: mvn clean test -Dcucumber.filter.tags="@ui or @api"
+      - uses: actions/checkout@v4
+        with:
+          repository: aveshrampers/StarWars
+          path: StarWarsUI
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+      - run: mvn clean test -Dcucumber.filter.tags="@ui or @api"
 
-    - name: Build test report
-      uses: simple-elf/allure-report-action@v1.7
-      if: always()
-      with:
-        gh_pages: gh-pages
-        allure_history: allure-history
-        allure_results: ./StarWarsUI/target/allure-results
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
+          gh_pages: gh-pages
+          allure_history: allure-history
+          allure_results: ./StarWarsUI/target/allure-results
 
-    - name: Publish test report
-      uses: peaceiris/actions-gh-pages@v3
-      if: always()
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
-        publish_dir: allure-history
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
