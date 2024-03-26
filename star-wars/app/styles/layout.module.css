@@ -1,0 +1,87 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto auto 1fr 36px;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.description {
+  white-space: pre-line;
+  color: white;
+  max-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', monospace;
+}
+
+.lists {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.image {
+  max-height: 800px;
+  margin-right: 100px;
+}
+
+.header {
+  grid-area: header;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 800px;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+}
+
+.header,
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  grid-area: footer;
+  justify-self: center;
+}
+
+.nav {
+  grid-area: nav;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: large;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link {
+  color: white;
+}
+
+.link.active {
+  text-decoration: underline;
+}
+

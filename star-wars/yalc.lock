@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "michael-sw-components": {
+      "signature": "fddf5671121fa6ca52977d1941e54e5c",
+      "file": true
+    }
+  }
+}

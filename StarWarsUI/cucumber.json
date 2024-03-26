@@ -1,0 +1,511 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "The base url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4175713900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the url",
+            "match": {
+              "location": "stepDefinition.MovieListSteps.getUrl()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-03-23T20:21:52.564Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1400032600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.setup()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Get the 3rd movie and check if the director of the movie is ‘Richard Marquand’",
+        "description": "",
+        "id": "verify-directors-and-producers-of-the-movies;get-the-3rd-movie-and-check-if-the-director-of-the-movie-is-‘richard-marquand’",
+        "after": [
+          {
+            "result": {
+              "duration": 252395800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.CloseBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 860999600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "assert the '3'rd movie is directed by 'Richard Marquand'",
+            "match": {
+              "arguments": [
+                {
+                  "val": "'3'",
+                  "offset": 11
+                },
+                {
+                  "val": "'Richard Marquand'",
+                  "offset": 38
+                }
+              ],
+              "location": "stepDefinition.MovieListSteps.assertDirector(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "The base url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1347181400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the url",
+            "match": {
+              "location": "stepDefinition.MovieListSteps.getUrl()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-03-23T20:21:59.281Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1244681800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.setup()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Get the 5th movie and assert that ’Producers’ are not ‘Gary Kurtz, George Lucas'",
+        "description": "",
+        "id": "verify-directors-and-producers-of-the-movies;get-the-5th-movie-and-assert-that-’producers’-are-not-‘gary-kurtz--george-lucas-",
+        "after": [
+          {
+            "result": {
+              "duration": 347649900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.CloseBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 45404000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "assert the '5'th movie is not producers are not 'Gary Kurts, George Lucase'",
+            "match": {
+              "arguments": [
+                {
+                  "val": "'5'",
+                  "offset": 11
+                },
+                {
+                  "val": "'Gary Kurts, George Lucase'",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDefinition.MovieListSteps.assertProducer(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Verify directors and producers of the movies",
+    "description": "",
+    "id": "verify-directors-and-producers-of-the-movies",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/Directors.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-03-23T20:22:02.278Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1499930400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.setup()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Get the list of movies and check if the movies count is 6",
+        "description": "",
+        "id": "get-the-list-of-movies.;get-the-list-of-movies-and-check-if-the-movies-count-is-6",
+        "after": [
+          {
+            "result": {
+              "duration": 313760400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.CloseBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1208425700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the url",
+            "match": {
+              "location": "stepDefinition.MovieListSteps.getUrl()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 51387500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "assert response count is 6",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 25
+                }
+              ],
+              "location": "stepDefinition.MovieListSteps.assertMovieCount(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Get the list of movies.",
+    "description": "",
+    "id": "get-the-list-of-movies.",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/MovieList.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"pages.MovieListingPage.Open_Homepage()\" because \"this.movieListingPage\" is null\r\n\tat stepDefinition.MovieListingSteps.Navigate_to_HomePage(MovieListingSteps.java:14)\r\n\tat ✽.I am on the movie listing page(file:///C:/Users/Avesh/IdeaProjects/StarWarsUI/src/test/java/features/VerifyMovieInformation.feature:4)\r\n",
+              "duration": 7968300,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "I am on the movie listing page",
+            "match": {
+              "location": "stepDefinition.MovieListingSteps.Navigate_to_HomePage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-03-23T20:22:05.360Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1424690500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.setup()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Sort movies by ’Title’ and assert the last movie in the list is ‘The Phantom Menace’",
+        "description": "",
+        "id": "verify-movie-information;sort-movies-by-’title’-and-assert-the-last-movie-in-the-list-is-‘the-phantom-menace’",
+        "after": [
+          {
+            "result": {
+              "duration": 1015587200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.CloseBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "I click the Title header",
+            "match": {
+              "location": "stepDefinition.MovieListingSteps.Click_On_Header()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "the last movie in the list should be \"The Phantom Menace\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The Phantom Menace\"",
+                  "offset": 37
+                }
+              ],
+              "location": "stepDefinition.MovieListingSteps.Verify_Last_Movie(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"pages.MovieListingPage.Open_Homepage()\" because \"this.movieListingPage\" is null\r\n\tat stepDefinition.MovieListingSteps.Navigate_to_HomePage(MovieListingSteps.java:14)\r\n\tat ✽.I am on the movie listing page(file:///C:/Users/Avesh/IdeaProjects/StarWarsUI/src/test/java/features/VerifyMovieInformation.feature:4)\r\n",
+              "duration": 998000,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "I am on the movie listing page",
+            "match": {
+              "location": "stepDefinition.MovieListingSteps.Navigate_to_HomePage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-03-23T20:22:07.830Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1176963900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.setup()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "View the movie ‘The Empire Strikes Back’ and check if the ‘Species’ list has ‘Wookie’",
+        "description": "",
+        "id": "verify-movie-information;view-the-movie-‘the-empire-strikes-back’-and-check-if-the-‘species’-list-has-‘wookie’",
+        "after": [
+          {
+            "result": {
+              "duration": 455377800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.CloseBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "I navigate to the movie details page for \"The Empire Strikes Back\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The Empire Strikes Back\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinition.MovieDescriptionSteps.iNavigateToTheMovieDetailsPageFor(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "I should see \"Wookie\" listed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Wookie\"",
+                  "offset": 13
+                }
+              ],
+              "location": "stepDefinition.MovieDescriptionSteps.iShouldSeeListed(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"pages.MovieListingPage.Open_Homepage()\" because \"this.movieListingPage\" is null\r\n\tat stepDefinition.MovieListingSteps.Navigate_to_HomePage(MovieListingSteps.java:14)\r\n\tat ✽.I am on the movie listing page(file:///C:/Users/Avesh/IdeaProjects/StarWarsUI/src/test/java/features/VerifyMovieInformation.feature:4)\r\n",
+              "duration": 997700,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "I am on the movie listing page",
+            "match": {
+              "location": "stepDefinition.MovieListingSteps.Navigate_to_HomePage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-03-23T20:22:09.472Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1198468300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.setup()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Assert that ‘Planets’ ‘Camino’ is not part of the movie ‘The Phantom Menace’",
+        "description": "",
+        "id": "verify-movie-information;assert-that-‘planets’-‘camino’-is-not-part-of-the-movie-‘the-phantom-menace’",
+        "after": [
+          {
+            "result": {
+              "duration": 255390900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.MovieDescriptionSteps.CloseBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "I navigate to the movie details page for \"The Phantom Menace\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"The Phantom Menace\"",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinition.MovieDescriptionSteps.iNavigateToTheMovieDetailsPageFor(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "I should not see the planet \"Camino\" listed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Camino\"",
+                  "offset": 28
+                }
+              ],
+              "location": "stepDefinition.MovieDescriptionSteps.iShouldNotSeeThePlanetListed(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Verify Movie Information",
+    "description": "",
+    "id": "verify-movie-information",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/VerifyMovieInformation.feature",
+    "tags": []
+  }
+]
