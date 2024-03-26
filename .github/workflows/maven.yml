@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./star-wars
+        working-directory: star-wars
     steps:
       - run: echo "Building environment"
         name: Setup environment and Run Tests
